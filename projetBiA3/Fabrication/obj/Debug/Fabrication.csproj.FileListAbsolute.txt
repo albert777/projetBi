@@ -1,0 +1,5 @@
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Fabrication\bin\Debug\Fabrication.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Fabrication\bin\Debug\Fabrication.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Fabrication\obj\Debug\Fabrication.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Fabrication\obj\Debug\Fabrication.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Fabrication\obj\Debug\Fabrication.pdb

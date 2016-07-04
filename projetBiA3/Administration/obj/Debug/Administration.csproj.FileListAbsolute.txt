@@ -1,0 +1,5 @@
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Administration\bin\Debug\Administration.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Administration\bin\Debug\Administration.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Administration\obj\Debug\Administration.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Administration\obj\Debug\Administration.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Administration\obj\Debug\Administration.pdb
