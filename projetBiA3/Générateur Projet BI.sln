@@ -1,0 +1,67 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25123.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Générateur Projet BI", "Générateur Projet BI\Générateur Projet BI.csproj", "{FA360369-41D2-464E-802F-DB3E7D6C8184}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Administration", "Administration\Administration.csproj", "{3A75C8BD-666E-4014-943C-848E98F3CBAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Fabrication", "Fabrication\Fabrication.csproj", "{7C439875-1887-4A7F-B6D6-910B03D84F6D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Préparation", "Préparation\Préparation.csproj", "{886757EF-6528-440B-91CB-CDC3ECD308F4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Expédition", "Expédition\Expédition.csproj", "{FC131535-26C9-47DB-9564-B64EC8845F36}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FA360369-41D2-464E-802F-DB3E7D6C8184}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA360369-41D2-464E-802F-DB3E7D6C8184}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA360369-41D2-464E-802F-DB3E7D6C8184}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA360369-41D2-464E-802F-DB3E7D6C8184}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A75C8BD-666E-4014-943C-848E98F3CBAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A75C8BD-666E-4014-943C-848E98F3CBAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A75C8BD-666E-4014-943C-848E98F3CBAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A75C8BD-666E-4014-943C-848E98F3CBAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7C439875-1887-4A7F-B6D6-910B03D84F6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C439875-1887-4A7F-B6D6-910B03D84F6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C439875-1887-4A7F-B6D6-910B03D84F6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C439875-1887-4A7F-B6D6-910B03D84F6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{886757EF-6528-440B-91CB-CDC3ECD308F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{886757EF-6528-440B-91CB-CDC3ECD308F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{886757EF-6528-440B-91CB-CDC3ECD308F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{886757EF-6528-440B-91CB-CDC3ECD308F4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC131535-26C9-47DB-9564-B64EC8845F36}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC131535-26C9-47DB-9564-B64EC8845F36}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC131535-26C9-47DB-9564-B64EC8845F36}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC131535-26C9-47DB-9564-B64EC8845F36}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://projetbia3.visualstudio.com/
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = Générateur\u0020Projet\u0020BI\\Générateur\u0020Projet\u0020BI.csproj
+		SccProjectName1 = Générateur\u0020Projet\u0020BI
+		SccLocalPath1 = Générateur\u0020Projet\u0020BI
+		SccProjectUniqueName2 = Administration\\Administration.csproj
+		SccProjectName2 = Administration
+		SccLocalPath2 = Administration
+		SccProjectUniqueName3 = Fabrication\\Fabrication.csproj
+		SccProjectName3 = Fabrication
+		SccLocalPath3 = Fabrication
+		SccProjectUniqueName4 = Préparation\\Préparation.csproj
+		SccProjectName4 = Préparation
+		SccLocalPath4 = Préparation
+		SccProjectUniqueName5 = Expédition\\Expédition.csproj
+		SccProjectName5 = Expédition
+		SccLocalPath5 = Expédition
+	EndGlobalSection
+EndGlobal

@@ -1,0 +1,20 @@
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Générateur Projet BI.exe.config
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\obj\Debug\Générateur_Projet_BI.Properties.Resources.resources
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\obj\Debug\Générateur Projet BI.csproj.GenerateResource.Cache
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Générateur Projet BI.exe
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Générateur Projet BI.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\obj\Debug\Générateur_Projet_BI.Form1.resources
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\obj\Debug\Générateur Projet BI.exe
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\obj\Debug\Générateur Projet BI.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Fabrication.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Fabrication.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\obj\Debug\Générateur Projet BI.csprojResolveAssemblyReference.cache
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Administration.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Expédition.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Préparation.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\MySql.Data.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Administration.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Expédition.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\Préparation.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\MySql.Data.xml
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Générateur Projet BI\bin\Debug\RandomNameGeneratorLibrary.dll
