@@ -6,6 +6,7 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
 ### Sommaire
  - [Introduction](#introduction)
   - [Mind map](#mindmap)
+  - [Représentation du projet](#representation)
   - [Gantt](#gantt)
   - [Choix des technologies](#choixtechnos)
  - [Analyse du besoin](#analysebesoin)
@@ -21,6 +22,10 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
 ### <a id="mindmap">Mind map</a>
 
 ![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/Mind%20Map.PNG)
+
+### <a id="representation">Représentation du projet</a>
+
+![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/f1f96fa373ee0f572dccafd065d8f0d78319c96c/Sch%C3%A9ma%20Projet%20BI.png)
 
 ### <a id="gantt">Gantt</a>
 
