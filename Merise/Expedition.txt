@@ -1,0 +1,36 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Client
+#------------------------------------------------------------
+
+CREATE TABLE Client(
+        Id_Client       int (11) Auto_increment  NOT NULL ,
+        Nom_Client      Varchar (100) NOT NULL ,
+        Prenom_Client   Varchar (100) NOT NULL ,
+        Civilite_Client Varchar (25) ,
+        Age_Client      Int ,
+        Adresse_Client  Varchar (200) NOT NULL ,
+        Ville_Client    Varchar (100) NOT NULL ,
+        Pays_Client     Varchar (100) NOT NULL ,
+        PRIMARY KEY (Id_Client )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Commande
+#------------------------------------------------------------
+
+CREATE TABLE Commande(
+        Id_Commande             int (11) Auto_increment  NOT NULL ,
+        Reference_Commande      Varchar (25) NOT NULL ,
+        Date_Commande           Date NOT NULL ,
+        Date_Livraison_Commande Date NOT NULL ,
+        Id_Client               Int NOT NULL ,
+        PRIMARY KEY (Id_Commande )
+)ENGINE=InnoDB;
+
+ALTER TABLE Commande ADD CONSTRAINT FK_Commande_Id_Client FOREIGN KEY (Id_Client) REFERENCES Client(Id_Client);

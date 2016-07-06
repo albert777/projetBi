@@ -1,0 +1,44 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Commande
+#------------------------------------------------------------
+
+CREATE TABLE Commande(
+        Id_Commande                     int (11) Auto_increment  NOT NULL ,
+        Reference_Commande              Varchar (25) NOT NULL ,
+        Temps_Preparation_Commande      Int NOT NULL ,
+        Date_Debut_Preparation_Commande Date NOT NULL ,
+        Date_Fin_Preparation_Commande   Date ,
+        PRIMARY KEY (Id_Commande )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Produit
+#------------------------------------------------------------
+
+CREATE TABLE Produit(
+        Id_Produit        int (11) Auto_increment  NOT NULL ,
+        Nom_Produit       Varchar (100) NOT NULL ,
+        Reference_Produit Varchar (100) NOT NULL ,
+        Prix_Produit      Decimal (25) NOT NULL ,
+        PRIMARY KEY (Id_Produit )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: contient
+#------------------------------------------------------------
+
+CREATE TABLE contient(
+        Id_Commande Int NOT NULL ,
+        Id_Produit  Int NOT NULL ,
+        PRIMARY KEY (Id_Commande ,Id_Produit )
+)ENGINE=InnoDB;
+
+ALTER TABLE contient ADD CONSTRAINT FK_contient_Id_Commande FOREIGN KEY (Id_Commande) REFERENCES Commande(Id_Commande);
+ALTER TABLE contient ADD CONSTRAINT FK_contient_Id_Produit FOREIGN KEY (Id_Produit) REFERENCES Produit(Id_Produit);

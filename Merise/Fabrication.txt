@@ -1,0 +1,95 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Produit
+#------------------------------------------------------------
+
+CREATE TABLE Produit(
+        Id_Produit                    int (11) Auto_increment  NOT NULL ,
+        Nom_Produit                   Varchar (100) NOT NULL ,
+        Reference_Produit             Varchar (25) NOT NULL ,
+        Prix_Produit                  Decimal (25) NOT NULL ,
+        Date_Debut_Assemblage_Produit Date NOT NULL ,
+        Date_Fin_Assemblage_Produit   Date ,
+        Stock_Produit                 Int NOT NULL ,
+        LigneProduit                  Varchar (100) NOT NULL ,
+        PRIMARY KEY (Id_Produit )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Pièce
+#------------------------------------------------------------
+
+CREATE TABLE Piece(
+        Id_Piece                     int (11) Auto_increment  NOT NULL ,
+        Nom_Piece                    Varchar (100) NOT NULL ,
+        Reference_Piece              Varchar (25) NOT NULL ,
+        Prix_Piece                   Decimal (25) NOT NULL ,
+        Couleur_Piece                Varchar (25) ,
+        Date_Debut_Fabrication_Piece Date NOT NULL ,
+        Date_Fin_Fabrication_Piece   Date ,
+        Stock_Piece                  Int NOT NULL ,
+        Id_Machine                   Int NOT NULL ,
+        PRIMARY KEY (Id_Piece )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Machine
+#------------------------------------------------------------
+
+CREATE TABLE Machine(
+        Id_Machine              int (11) Auto_increment  NOT NULL ,
+        Type_Machine            Varchar (50) NOT NULL ,
+        Rendement_Prevu_Machine Int NOT NULL ,
+        Rendement_Reel_Machine  Int NOT NULL ,
+        PRIMARY KEY (Id_Machine )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Evenement Machines
+#------------------------------------------------------------
+
+CREATE TABLE Evenement_Machines(
+        Id_Evenement          int (11) Auto_increment  NOT NULL ,
+        Date_Debut_Evenement  Date NOT NULL ,
+        Date_Fin_Evenement    Date NOT NULL ,
+        Type_Evenement        Int NOT NULL ,
+        Commentaire_Evenement Varchar (1000) ,
+        Id_Machine            Int NOT NULL ,
+        PRIMARY KEY (Id_Evenement )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: contient
+#------------------------------------------------------------
+
+CREATE TABLE contient(
+        Id_Produit Int NOT NULL ,
+        Id_Piece   Int NOT NULL ,
+        PRIMARY KEY (Id_Produit ,Id_Piece )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: assemble
+#------------------------------------------------------------
+
+CREATE TABLE assemble(
+        Id_Produit Int NOT NULL ,
+        Id_Machine Int NOT NULL ,
+        PRIMARY KEY (Id_Produit ,Id_Machine )
+)ENGINE=InnoDB;
+
+ALTER TABLE Piece ADD CONSTRAINT FK_Piece_Id_Machine FOREIGN KEY (Id_Machine) REFERENCES Machine(Id_Machine);
+ALTER TABLE Evenement_Machines ADD CONSTRAINT FK_Evenement_Machines_Id_Machine FOREIGN KEY (Id_Machine) REFERENCES Machine(Id_Machine);
+ALTER TABLE contient ADD CONSTRAINT FK_contient_Id_Produit FOREIGN KEY (Id_Produit) REFERENCES Produit(Id_Produit);
+ALTER TABLE contient ADD CONSTRAINT FK_contient_Id_Piece FOREIGN KEY (Id_Piece) REFERENCES Piece(Id_Piece);
+ALTER TABLE assemble ADD CONSTRAINT FK_assemble_Id_Produit FOREIGN KEY (Id_Produit) REFERENCES Produit(Id_Produit);
+ALTER TABLE assemble ADD CONSTRAINT FK_assemble_Id_Machine FOREIGN KEY (Id_Machine) REFERENCES Machine(Id_Machine);

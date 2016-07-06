@@ -1,0 +1,102 @@
+#------------------------------------------------------------
+#        Script MySQL.
+#------------------------------------------------------------
+
+
+#------------------------------------------------------------
+# Table: Commande
+#------------------------------------------------------------
+
+CREATE TABLE Commande(
+        Id_Commande                            int (11) Auto_increment  NOT NULL ,
+        Reference_Commande                     Varchar (25) NOT NULL ,
+        Date_Commande                          Date NOT NULL ,
+        Date_Livraison_Previsionnelle_Commande Date NOT NULL ,
+        Date_Livraison_Effective_Commande      Date ,
+        Prix_Commande                          Decimal (25) NOT NULL ,
+        Etat_Commande                          Int NOT NULL ,
+        Id_Client                              Int ,
+        PRIMARY KEY (Id_Commande )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Client
+#------------------------------------------------------------
+
+CREATE TABLE Client(
+        Id_Client       int (11) Auto_increment  NOT NULL ,
+        Nom_Client      Varchar (25) ,
+        Prenom_Client   Varchar (100) NOT NULL ,
+        Civilite_Client Varchar (25) ,
+        Age_Client      Int ,
+        Adresse_Client  Varchar (200) NOT NULL ,
+        Ville_Client    Varchar (100) NOT NULL ,
+        Pays_Client     Varchar (100) NOT NULL ,
+        PRIMARY KEY (Id_Client )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Retour client
+#------------------------------------------------------------
+
+CREATE TABLE Retour_client(
+        Id_Retour_Client   int (11) Auto_increment  NOT NULL ,
+        Note_Retour_Client Int ,
+        PRIMARY KEY (Id_Retour_Client )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: Produits
+#------------------------------------------------------------
+
+CREATE TABLE Produits(
+        Id_Produit        int (11) Auto_increment  NOT NULL ,
+        Nom_Produit       Varchar (100) NOT NULL ,
+        Reference_Produit Varchar (100) NOT NULL ,
+        Prix_Produit      Decimal (25) NOT NULL ,
+        PRIMARY KEY (Id_Produit )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: concerne
+#------------------------------------------------------------
+
+CREATE TABLE concerne(
+        Id_Produit       Int NOT NULL ,
+        Id_Retour_Client Int NOT NULL ,
+        PRIMARY KEY (Id_Produit ,Id_Retour_Client )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: concerne2
+#------------------------------------------------------------
+
+CREATE TABLE concerne2(
+        Id_Retour_Client Int NOT NULL ,
+        Id_Commande      Int NOT NULL ,
+        PRIMARY KEY (Id_Retour_Client ,Id_Commande )
+)ENGINE=InnoDB;
+
+
+#------------------------------------------------------------
+# Table: contient
+#------------------------------------------------------------
+
+CREATE TABLE contient(
+        Id_Produit  Int NOT NULL ,
+        Id_Commande Int NOT NULL ,
+        PRIMARY KEY (Id_Produit ,Id_Commande )
+)ENGINE=InnoDB;
+
+ALTER TABLE Commande ADD CONSTRAINT FK_Commande_Id_Client FOREIGN KEY (Id_Client) REFERENCES Client(Id_Client);
+ALTER TABLE concerne ADD CONSTRAINT FK_concerne_Id_Produit FOREIGN KEY (Id_Produit) REFERENCES Produits(Id_Produit);
+ALTER TABLE concerne ADD CONSTRAINT FK_concerne_Id_Retour_Client FOREIGN KEY (Id_Retour_Client) REFERENCES Retour_client(Id_Retour_Client);
+ALTER TABLE concerne2 ADD CONSTRAINT FK_concerne2_Id_Retour_Client FOREIGN KEY (Id_Retour_Client) REFERENCES Retour_client(Id_Retour_Client);
+ALTER TABLE concerne2 ADD CONSTRAINT FK_concerne2_Id_Commande FOREIGN KEY (Id_Commande) REFERENCES Commande(Id_Commande);
+ALTER TABLE contient ADD CONSTRAINT FK_contient_Id_Produit FOREIGN KEY (Id_Produit) REFERENCES Produits(Id_Produit);
+ALTER TABLE contient ADD CONSTRAINT FK_contient_Id_Commande FOREIGN KEY (Id_Commande) REFERENCES Commande(Id_Commande);
