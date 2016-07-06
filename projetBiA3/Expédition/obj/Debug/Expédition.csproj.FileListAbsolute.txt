@@ -1,0 +1,6 @@
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Expédition\bin\Debug\Expédition.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Expédition\bin\Debug\Expédition.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Expédition\obj\Debug\Expédition.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Expédition\obj\Debug\Expédition.pdb
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Expédition\bin\Debug\RandomNameGeneratorLibrary.dll
+C:\Users\Antoine\Source\Workspaces\Workspace\projetBiA3\Expédition\obj\Debug\Expédition.csprojResolveAssemblyReference.cache
