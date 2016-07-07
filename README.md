@@ -5,11 +5,13 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
 
 ### Sommaire
  - [Introduction](#introduction)
+  - [Contexte](#contexte)
+  - [Analyse du besoin](#analysebesoin)
   - [Mind map](#mindmap)
   - [Représentation du projet](#representation)
   - [Gantt](#gantt)
   - [Choix des technologies](#choixtechnos)
- - [Analyse du besoin](#analysebesoin)
+ - [Conception](#conception)
   - [UML](#uml)
   - [Merise](#merise)
     - [Administration](#admin)
@@ -18,6 +20,12 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
     - [Expédition](#expedition)
 
 ## <a id="introduction">Introduction</a>
+
+### <a id="contexte">Contexte</a>
+
+La société PlasticBoX® aussi appelée PBX, créée des boîtes en plastiques depuis des décennies. Elle a connu un énorme essor dans les années 70 et aujourd'hui son carnet de commandes ne désemplit pas. Depuis 15 ans elle doit faire face à une concurrence beaucoup plus rude sur son domaine, la mondialisation a permis à des sociétés installées dans des pays où les coûts de revient sont beaucoup plus faibles, et ainsi se positionner confortablement sur le marché. Bien que la marque jouisse de sa notoriété, il est teps pour elle de refondre ses méthodes de travail afin de maintenir sa place et surtout sa rentabilité financière dans le cas où elle devrait aligner ses prix.
+
+### <a id="analysebesoin">Analyse du besoin</a>
 
 ### <a id="mindmap">Mind map</a>
 
@@ -39,7 +47,7 @@ MySql sera utilisé pour la réalisation des bases de données relationnelles.
 Dans notre DataWarehouse, nous avons une base de données non-relationnel. Nous utilisons CouchDB (document).
 Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 
-## <a id="analysebesoin">Analyse du besoin</a>
+## <a id="conception">Conception</a>
 
 ### <a id="uml">UML</a>
 
