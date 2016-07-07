@@ -43,10 +43,11 @@ CREATE TABLE Piece(
 #------------------------------------------------------------
 
 CREATE TABLE Machine(
-        Id_Machine              int (11) Auto_increment  NOT NULL ,
-        Type_Machine            Varchar (50) NOT NULL ,
-        Rendement_Prevu_Machine Int NOT NULL ,
-        Rendement_Reel_Machine  Int NOT NULL ,
+        Id_Machine                 int (11) Auto_increment  NOT NULL ,
+        Type_Machine               Varchar (50) NOT NULL ,
+        Rendement_Prevu_Machine    Int NOT NULL ,
+        Rendement_Reel_Machine     Int NOT NULL ,
+	Produits_Fabriques_Machine int(11) DEFAULT NULL,
         PRIMARY KEY (Id_Machine )
 )ENGINE=InnoDB;
 

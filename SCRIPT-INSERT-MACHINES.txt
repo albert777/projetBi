@@ -1,0 +1,74 @@
+INSERT INTO `fabrication`.`machine`
+(
+`Type_Machine`,
+`Rendement_Prevu_Machine`,
+`Rendement_Reel_Machine`,
+`Produits_Fabriques_Machine`)
+
+VALUES
+(FabricationB,
+300,
+300,
+0);
+SELECT * FROM fabrication.machine;
+
+
+INSERT INTO `fabrication`.`machine`
+(
+`Type_Machine`,
+`Rendement_Prevu_Machine`,
+`Rendement_Reel_Machine`,
+`Produits_Fabriques_Machine`)
+
+VALUES
+(FabricationC,
+250,
+250,
+0);
+SELECT * FROM fabrication.machine;
+
+
+INSERT INTO `fabrication`.`machine`
+(
+`Type_Machine`,
+`Rendement_Prevu_Machine`,
+`Rendement_Reel_Machine`,
+`Produits_Fabriques_Machine`)
+
+VALUES
+(ConditionnementA,
+200,
+200,
+0);
+SELECT * FROM fabrication.machine;
+
+
+INSERT INTO `fabrication`.`machine`
+(
+`Type_Machine`,
+`Rendement_Prevu_Machine`,
+`Rendement_Reel_Machine`,
+`Produits_Fabriques_Machine`)
+
+VALUES
+(ConditionnementB,
+200,
+200,
+0);
+SELECT * FROM fabrication.machine;
+
+
+
+INSERT INTO `fabrication`.`machine`
+(
+`Type_Machine`,
+`Rendement_Prevu_Machine`,
+`Rendement_Reel_Machine`,
+`Produits_Fabriques_Machine`)
+
+VALUES
+(ConditionnementC,
+350,
+350,
+0);
+SELECT * FROM fabrication.machine;
