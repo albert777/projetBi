@@ -69,7 +69,7 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 
 ### <a id="uml">UML</a>
 
-![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/UML%20G%C3%A9n%C3%A9rateur.png)
+![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/73bd62ad5238b7735f35005bd5eebdd92fc88dbf/UML%20G%C3%A9n%C3%A9rateur.png)
 
 ### <a id="merise">Merise</a> 
 
