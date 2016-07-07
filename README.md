@@ -22,6 +22,12 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
     - [Fabrication](#fabrication)
     - [Préparation](#preparation)
     - [Expédition](#expedition)
+ - [Mise en place](#miseenplace)
+  - [Générateurs](#générateurs)
+  - [Infrastructure réseau](#infra)
+  - [Serveur NoSql](#nosql)
+  - [Tableau de bord](#tableaubord)
+ - [Conclusion](#conclusion)
 
 ## <a id="introduction">Introduction</a>
 
@@ -42,7 +48,7 @@ L'ensemble des données devra être récupéré des différentes bases de donné
 #### <a id="analysedonnées">Analyse des données</a>
 Il faudra ensuite analyser les données métier afin de définir des indicateurs pertinents au sein de notre base. Notre objectif est de pouvoir prendre des décisions liées à l'opérationnel et d'améliorer les performances et la réactivité de chaque service.
 
-#### <a id="tableaubord">Tableau de bord</a>
+#### <a id="tableaudebord">Tableau de bord</a>
 Enfin, nous devrons mettre en place un tableau de bord de suivi d'activité. Il reprendra les différents indicateurs et permettra de suivre rapidement la santé de l'entreprise sur l'ensemble de ses services.
 
 ### <a id="mindmap">Mind map</a>
@@ -54,7 +60,7 @@ Enfin, nous devrons mettre en place un tableau de bord de suivi d'activité. Il 
 ![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/f1f96fa373ee0f572dccafd065d8f0d78319c96c/Sch%C3%A9ma%20Projet%20BI.png)
 
 ### <a id="gantt">Gantt</a>
-
+En gestion de projet, un Gantt permet de représenter les tâches à effectuer, ainsi que leur durée. Cela permet d'évaluer l'avancement d'un projet. Pour le notre, nous avons mis en place le Gantt suivant :
 ![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/Gantt.PNG)
 
 ### <a id="choixtechnos">Choix des technologies</a>
@@ -68,6 +74,8 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 ## <a id="conception">Conception</a>
 
 ### <a id="uml">UML</a>
+
+![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/73bd62ad5238b7735f35005bd5eebdd92fc88dbf/UML%20G%C3%A9n%C3%A9rateur.png)
 
 ### <a id="merise">Merise</a> 
 
@@ -86,3 +94,15 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 #### <a id="expedition">Expédition</a>
 
 ![alt tag](https://github.com/antoinedelia/projetBi/blob/master/Merise/Expedition.PNG)
+
+## <a id="miseenplace>Mise en place</a>
+
+### <a id="générateurs">Générateurs</a>
+
+### <a id="infra">Infrastructure réseau</a>
+
+### <a id="nosql">Serveur NoSql</a>
+
+### <a id="tableaubord">Tableau de bord</a>
+
+## <a id="conclusion">Conclusion</a>
