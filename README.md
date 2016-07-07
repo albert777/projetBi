@@ -22,6 +22,12 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
     - [Fabrication](#fabrication)
     - [Préparation](#preparation)
     - [Expédition](#expedition)
+ - [Mise en place](#miseenplace)
+  - [Générateurs](#générateurs)
+  - [Infrastructure réseau](#infra)
+  - [Serveur NoSql](#nosql)
+  - [Tableau de bord](#tableaubord)
+ - [Conclusion](#conclusion)
 
 ## <a id="introduction">Introduction</a>
 
@@ -88,3 +94,15 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 #### <a id="expedition">Expédition</a>
 
 ![alt tag](https://github.com/antoinedelia/projetBi/blob/master/Merise/Expedition.PNG)
+
+## <a id="miseenplace>Mise en place</a>
+
+### <a id="générateurs">Générateurs</a>
+
+### <a id="infra">Infrastructure réseau</a>
+
+### <a id="nosql">Serveur NoSql</a>
+
+### <a id="tableaubord">Tableau de bord</a>
+
+## <a id="conclusion">Conclusion</a>
