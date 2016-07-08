@@ -102,7 +102,20 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 
 ### <a id="infra">Infrastructure réseau</a>
 
+On doit mettre en place une infrastructure réseau pour la société Plasticbox. Dans cette société, nous pouvons trouver plusieurs services : administration, préparation, fabrication et expédition. Ces derniers contiennent chacun un serveur. Afin d'améliorer l'infrastructure de l'entreprise, nous avons mis en place une redondance afin d'assurer le bon fonctionnement du réseau de la société. Par ailleurs, l'infrastructure de l'entreprise respecte un découpage où chaque service correspond à un VLAN précis.
+
 ![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/infra.png)
+
+Pour pouvoir réaliser le découpage des adresses IP de l'entreprise, il y a plusieurs VLAN. Chacun d'eux doit avoir son propre réseau. Afin d'y parvenir, nous sommes partis sur une adresse IP de classe B (172.16.0.0) privée, en utilisant la technique du VLSM qui est utilisée dans le but de mieux gérer les adresses IP tout comme le CIDR. La différence est que le CIDR est majoritairement utilisé au niveau Internet, alors que le VLSM est plus utilisé au niveau local.
+
+_Les VLAN:_  
+
+Service| VLAN | Adresse réseau | Première adresse | Dernière adresse | Broadcast | CIDR | Masque de sous-réseau
+--- | --- | --- | --- | --- | --- | --- | --- 
+Préparation | 10 | 172.16.0.0 | 172.16.0.1 | 172.16.0.30 | 172.16.0.31 | /27 | 255.255.255.224
+Fabrication | 20 | 172.16.0.32 | 172.16.0.33 | 172.16.0.62 | 172.16.0.63 | /27 | 255.255.255.224
+Administration | 30 | 172.16.0.64 | 172.16.0.65 | 172.16.0.94 | 172.16.0.95 | /27 | 255.255.255.224
+Expédition | 40 | 172.16.0.96 | 172.16.0.97 | 172.16.0.126 | 172.16.0.127 | /27 | 255.255.255.224
 
 ![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/infra2.png)
 
