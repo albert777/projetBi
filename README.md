@@ -100,9 +100,11 @@ Pour chaque base de données, nous avons conçu un Merise afin de prévoir toute
 
 ![alt tag](https://github.com/antoinedelia/projetBi/blob/master/Merise/Expedition.PNG)
 
-## <a id="miseenplace>Mise en place</a>
+## <a id="miseenplace">Mise en place</a>
 
 ### <a id="générateurs">Générateurs</a>
+
+Il nous était demandé de réaliser quatre générateurs de données (un pour chaque base de données). Pour cela, nous avons développer un programme en C# répondant aux attendus. Celui-ci est composé de cinq parties. En premier, nous avons le programme principal qui se compose d'une fenêtre pour l'utilisateur. Celui-ci va alors pouvoir générer des clients et des commandes. Lors de cette génération, notre programme va aléatoirement créer des données cohérentes par rapport à notre base de données. Ainsi, nous ne pourrons avoir une date d'expédition supérieure à la date de réception. Une fois toutes ces données générées, nous les insérons dans les bases de données correspondantes.
 
 ### <a id="infra">Infrastructure réseau</a>
 
