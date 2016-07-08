@@ -152,10 +152,13 @@ Pour ce projet, nous avons utilisé les indicateurs suivants :
  - Expédition
   - Temps moyen entre la commande et son expédition
  - Fabrication
+  - Nombre de produits fabriqués
+  - Stock d'un produit
   - Temps moyen d'assemblage par produit
   - Temps moyen d'assemblage par pièce
   - Rendement d'une machine
   - Nombre de pannes pour une machine
+  - Temps moyen d'une panne
   - Machine les plus utilisées
 
 ## <a id="conclusion">Conclusion</a>
