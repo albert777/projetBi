@@ -76,9 +76,13 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 
 ### <a id="uml">UML</a>
 
+Avant de développer nos générateurs, nous avons fait une phase de conception afin de créer un UML qui représentera l'architecture de notre application.
+
 ![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/73bd62ad5238b7735f35005bd5eebdd92fc88dbf/UML%20G%C3%A9n%C3%A9rateur.png)
 
 ### <a id="merise">Merise</a> 
+
+Pour chaque base de données, nous avons conçu un Merise afin de prévoir toute éventualité. Nous nous sommes servi de JMerise afin de le réaliser. Dans un premier temps, nous avons créer un MCD en incluant les tables et leurs colonnes. Ensuite nous avons généré le MCD corrsepondant.
 
 #### <a id="admin">Administration</a>
 
