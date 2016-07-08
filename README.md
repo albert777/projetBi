@@ -164,3 +164,6 @@ Pour ce projet, nous avons utilisé les indicateurs suivants :
   - Machine les plus utilisées
 
 ## <a id="conclusion">Conclusion</a>
+
+Le projet qui nous a été confié portait sur la Business Intelligence et le Big Data.
+Avec la réalisation de générateur de données en C#, la mise en place de serveurs et de base de données ainsi que la conception d'un tableau de bord, ce projet s'est avéré très complet et enrichissant pour notre expérience professionnelle.
