@@ -27,6 +27,7 @@ Ce projet a été réalisé par quatre étudiants du CESI Exia de Toulouse : [An
   - [Infrastructure réseau](#infra)
   - [Serveur NoSql](#nosql)
   - [Tableau de bord](#tableaubord)
+    - [Indicateurs](#indicateurs)
  - [Conclusion](#conclusion)
 
 ## <a id="introduction">Introduction</a>
@@ -101,8 +102,43 @@ Pour nos serveurs, nous utilisons des Windows Server 2008 R2.
 
 ### <a id="infra">Infrastructure réseau</a>
 
+![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/infra.png)
+
+![alt tag](https://raw.githubusercontent.com/antoinedelia/projetBi/master/infra2.png)
+
 ### <a id="nosql">Serveur NoSql</a>
 
 ### <a id="tableaubord">Tableau de bord</a>
+
+Le tableau de bord permet de reprendre les différents indicateurs et permet de suivre rapidement la santé de l'entreprise sur l'ensemble de ses services.
+
+#### <a id="indicateurs">Indicateurs</a>
+
+Pour ce projet, nous avons utilisé les indicateurs suivants :
+
+ - Administration
+  - Produits les plus vendus
+  - Produits les moins vendus
+  - Produits populaires en fonction de la couleur
+  - Prix moyenne d'une commande
+  - Taux de commandes annulées
+  - Taux de satisfaction par commande
+  - Taux de satisfaction par pays
+  - Écart entre date prévisionnelle et effective d'une commande
+  - Nombre de produits par commande
+  - Nombre de commandes par client
+  - Âge par client
+  - Pays avec le plus de commandes
+  - Chiffre d'affaire par pays
+ - Préparation
+  - Temps moyen de la préparation d'une commande
+ - Expédition
+  - Temps moyen entre la commande et son expédition
+ - Fabrication
+  - Temps moyen d'assemblage par produit
+  - Temps moyen d'assemblage par pièce
+  - Rendement d'une machine
+  - Nombre de pannes pour une machine
+  - Machine les plus utilisées
 
 ## <a id="conclusion">Conclusion</a>
