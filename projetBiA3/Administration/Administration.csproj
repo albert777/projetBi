@@ -53,15 +53,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Client.cs" />
-    <Compile Include="Commande.cs" />
+    <Compile Include="CommandeAdministration.cs" />
     <Compile Include="DBConnect.cs" />
-    <Compile Include="Produit.cs" />
+    <Compile Include="ProduitAdministration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Expédition\Expédition.csproj">
+      <Project>{fc131535-26c9-47db-9564-b64ec8845f36}</Project>
+      <Name>Expédition</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Fabrication\Fabrication.csproj">
       <Project>{7c439875-1887-4a7f-b6d6-910b03d84f6d}</Project>
       <Name>Fabrication</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Préparation\Préparation.csproj">
+      <Project>{886757ef-6528-440b-91cb-cdc3ecd308f4}</Project>
+      <Name>Préparation</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -10,14 +10,16 @@ namespace Fabrication
     {
         #region Attributes
         private static Random random = new Random();
+        
         private static List<string> Quotes = new List<string>();
         public enum Event { Panne, Maintenance };
+        
         #endregion
 
         #region Constructors
         public Evenement()
         {
-            Machine = RandomMachine();
+            //Machine = RandomMachine();
             DateDebutEvenement = RandomDate(null);
             DateFinEvenement = RandomDate(DateDebutEvenement);
             TypeEvenement = RandomEvent();
@@ -26,7 +28,7 @@ namespace Fabrication
 
         public Evenement(Machine machine, DateTime dateDebutEvenement, DateTime dateFinEvenement, Event typeEvenement, string commentaires)
         {
-            Machine = machine;
+            //Machine = machine;
             DateDebutEvenement = dateDebutEvenement;
             DateFinEvenement = dateFinEvenement;
             TypeEvenement = typeEvenement;
@@ -66,12 +68,13 @@ namespace Fabrication
         #endregion
 
         #region Getters and setters
-        public Machine Machine { get; set; }
+        //public Machine Machine { get; set; }
+        public int Id { get; set; }
         public DateTime DateDebutEvenement { get; set; }
         public DateTime DateFinEvenement { get; set; }
         public Event TypeEvenement { get; set; }
         public string Commentaires { get; set; }
+        public int IdMachine { get; set; }
         #endregion
-
     }
 }

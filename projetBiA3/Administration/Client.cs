@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
-using System.Xml.Serialization;
 using RandomNameGeneratorLibrary;
 using System.Data;
 using System.Reflection;
@@ -68,7 +62,7 @@ namespace Administration
         #endregion
 
         #region Methods for DB
-        public static List<Client> GenerateRandomClients()
+        public static List<Client> GenerateRandomClients(int nombreClients)
         {
             #region Pays
             listePays.Add("Afghanistan");
@@ -268,19 +262,21 @@ namespace Administration
             #endregion
             List<Client> listeClients = new List<Client>();
 
-            for (int i = 0; i < NOMBRE_DE_GENERATIONS; i++)
+            for (int i = 0; i < nombreClients; i++)
             {
                 listeClients.Add(new Client());
             }
-            DBConnect.DBConnect connect = new DBConnect.DBConnect();
+            DBConnect connect = new Administration.DBConnect();
             connect.InsertDT(CreateDataTable(listeClients), "client");
+            Expédition.DBConnect connect2 = new Expédition.DBConnect();
+            connect2.InsertDT(CreateDataTable(listeClients), "client");
             return listeClients;
         }
         public static List<Client> GetClientsFromDataBase()
         {
             List<Client> listeClients = new List<Client>();
 
-            DBConnect.DBConnect connect = new DBConnect.DBConnect();
+            Administration.DBConnect connect = new Administration.DBConnect();
             listeClients = connect.SelectClient();
 
             return listeClients;

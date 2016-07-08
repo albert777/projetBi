@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Fabrication
+﻿namespace Fabrication
 {
     public class Machine_Conditionnement : Machine
     {
@@ -13,5 +7,8 @@ namespace Fabrication
             RendementPrevu = rendementPrevu;
             RendementReel = random.Next(0, RendementPrevu + 20);
         }
+        public Machine_Conditionnement() { }
+
+        //public int ProduitsFabriques { get; set; }
     }
 }

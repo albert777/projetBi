@@ -13,5 +13,6 @@ namespace Fabrication
             RendementPrevu = rendementPrevu;
             RendementReel = random.Next(0, RendementPrevu + 20);
         }
+        public Machine_Fabrication() { }
     }
 }

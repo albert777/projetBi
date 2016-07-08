@@ -1,15 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using MySql.Data.MySqlClient;
-using Administration;
 using System.Data;
-using System.Data.SqlClient;
 using System.IO;
 
-namespace DBConnect
+namespace Administration
 {
     public class DBConnect
     {
@@ -31,9 +27,9 @@ namespace DBConnect
             server = "localhost";
             database = "administration";
             uid = "root";
-            password = "root";
+            password = "Azerty123@";
             string ConnectionString;
-            ConnectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";";
+            ConnectionString = "SERVER=" + server + ";" + "DATABASE=" + database + ";" + "UID=" + uid + ";" + "PASSWORD=" + password + ";Convert Zero Datetime=True;Allow Zero Datetime=True";
 
             connection = new MySqlConnection(ConnectionString);
         }
@@ -95,9 +91,9 @@ namespace DBConnect
             return listeClient;
         }
 
-        public List<Produit> SelectProduits()
+        public List<ProduitAdministration> SelectProduits()
         {
-            List<Produit> listeProduit = null;
+            List<ProduitAdministration> listeProduit = new List<ProduitAdministration>();
             string query = "SELECT * FROM Produits";
             if (OpenConnection() == true)
             {
@@ -107,7 +103,8 @@ namespace DBConnect
 
                 while (dataReader.Read())
                 {
-                    Produit pro = new Produit(true);
+                    ProduitAdministration pro = new ProduitAdministration(true);
+                    pro.Id = Convert.ToInt32(dataReader["Id_Produit"].ToString());
                     pro.Nom = dataReader["Nom_Produit"].ToString();
                     pro.Reference = dataReader["Reference_Produit"].ToString();
                     pro.Prix = Convert.ToDecimal(dataReader["Prix_Produit"].ToString());
@@ -117,11 +114,11 @@ namespace DBConnect
             return listeProduit;
         }
 
-        public List<Commande> SelectCommande()
+        public List<CommandeAdministration> SelectCommande()
         {
-            List<Commande> listeCommande = new List<Commande>();
+            List<CommandeAdministration> listeCommande = new List<CommandeAdministration>();
             string query = "SELECT * FROM Commande";
-            if(OpenConnection() == true )
+            if (OpenConnection() == true)
             {
                 MySqlCommand cmd = new MySqlCommand(query, connection);
 
@@ -129,16 +126,44 @@ namespace DBConnect
 
                 while (dataReader.Read())
                 {
-                    Commande com = new Commande(true);
+                    CommandeAdministration com = new CommandeAdministration(true);
                     com.Reference = dataReader["Reference_Commande"].ToString();
                     com.Date = Convert.ToDateTime(dataReader["Date_Commande"]);
                     com.DatePrevisionnelle = Convert.ToDateTime(dataReader["Date_Livraison_Previsionnelle_Commande"]);
-                    com.DateEffective = Convert.ToDateTime(dataReader["Date_Livraison_Effective_Commande"]);
+                    com.DateEffective = dataReader["Date_Livraison_Effective_Commande"] as DateTime?;
                     com.Prix = Convert.ToDecimal(dataReader["Prix_Commande"]);
-                    com.State = (Commande.Etat)dataReader["Etat_Commande"];
+                    com.State = (CommandeAdministration.Etat)dataReader["Etat_Commande"];
                     com.IdClient = Convert.ToInt32(dataReader["Id_Client"]);
                     listeCommande.Add(com);
-                }                
+                }
+            }
+            return listeCommande;
+        }
+
+        public List<CommandeAdministration> SelectCommande(int nombreCommandes)
+        {
+            List<CommandeAdministration> listeCommande = new List<CommandeAdministration>();
+            string query = "SELECT * FROM Commande ORDER BY Id_Commande DESC LIMIT " + nombreCommandes;
+            if (OpenConnection() == true)
+            {
+                MySqlCommand cmd = new MySqlCommand(query, connection);
+
+                MySqlDataReader dataReader = cmd.ExecuteReader();
+
+                while (dataReader.Read())
+                {
+                    CommandeAdministration com = new CommandeAdministration(true);
+                    com.IdCommande = Convert.ToInt32(dataReader["Id_Commande"].ToString());
+                    com.Reference = dataReader["Reference_Commande"].ToString();
+                    com.Date = Convert.ToDateTime(dataReader["Date_Commande"]);
+                    com.DatePrevisionnelle = Convert.ToDateTime(dataReader["Date_Livraison_Previsionnelle_Commande"]);
+                    com.DateEffective = dataReader["Date_Livraison_Effective_Commande"] as DateTime?;
+                    com.Prix = Convert.ToDecimal(dataReader["Prix_Commande"]);
+                    com.State = (CommandeAdministration.Etat)dataReader["Etat_Commande"];
+                    com.RetourClientCommande = Convert.ToInt32(dataReader["Retour_Client_Commande"]);
+                    com.IdClient = Convert.ToInt32(dataReader["Id_Client"]);
+                    listeCommande.Add(com);
+                }
             }
             return listeCommande;
         }
@@ -148,13 +173,16 @@ namespace DBConnect
         public void InsertDT(DataTable dataTable, string tableName)
         {
             connection.Open();
-            
-            string TempCSVFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments)+"\\dump.csv";
+
+            string TempCSVFile = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments) + "\\dump.csv";
             using (StreamWriter writer = new StreamWriter(TempCSVFile))
             {
                 Rfc4180Writer.WriteDataTable(dataTable, writer, false);
             }
+
             var msbl = new MySqlBulkLoader(connection);
+            string query = "SET FOREIGN_KEY_CHECKS=0;";
+            new MySqlCommand(query, connection);
             msbl.TableName = tableName;
             msbl.FileName = TempCSVFile;
             msbl.FieldTerminator = ",";
@@ -166,7 +194,6 @@ namespace DBConnect
         }
         #endregion
     }
-
     #region DataTable writer class
     public static class Rfc4180Writer
     {
@@ -192,6 +219,8 @@ namespace DBConnect
                 for (int i = 0; i < items.Count(); i++)
                     if (DateTime.TryParse(newItems[i], out dateValue))
                         newItems[i] = dateValue.ToString("yyyy-MM-dd HH:mm:ss");
+                    else if (newItems[i] == "")
+                        newItems[i] = null;
                 writer.WriteLine(String.Join(",", newItems));
             }
 
